@@ -19,12 +19,7 @@ jobs:
           r-version: "release"
 
       - name: Install R packages
-        run: |
-          install.packages(
-            c("ggplot2", "dplyr", "GGally", "car", "lmtest"),
-            repos = "https://cloud.r-project.org"
-          )
-        shell: Rscript {0}
+        run: Rscript -e "install.packages(c('ggplot2','dplyr','GGally','car','lmtest'), repos='https://cloud.r-project.org')"
 
       - name: Run analysis
         run: Rscript "life expectancy regression (GH).r"
