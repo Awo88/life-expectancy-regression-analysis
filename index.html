@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Expectancy Regression Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07090e;--surface:#0d1117;--surface2:#131920;--border:#1e2a3a;--border2:#2a3a50;--text:#e0ddd6;--muted:#4a5a70;--muted2:#6a7a90;--accent:#b7c66f;--green:#7bc67e;--red:#e06868}
+body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;font-size:13px;min-height:100vh;padding:3rem 1.5rem 5rem}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+.wrap{max-width:640px;margin:0 auto;position:relative;z-index:1}
+.tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+h1{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:3rem;color:var(--accent);line-height:1;letter-spacing:-.01em;margin-bottom:.75rem}
+.sub{font-size:11px;color:var(--muted2);letter-spacing:.06em;line-height:1.8;margin-bottom:2.5rem;max-width:480px}
+.divider{height:1px;background:var(--border);margin:2rem 0}
+.section-label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+.body-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--muted2);line-height:1.9;margin-bottom:1.5rem}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.chip{font-size:9px;letter-spacing:.1em;padding:4px 12px;border-radius:2px;border:1px solid var(--border2);color:var(--muted2);text-transform:uppercase}
+.chip.lang{border-color:var(--accent);color:var(--accent)}
+.methods{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:2rem}
+.method{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:14px}
+.method-name{font-size:10px;color:var(--text);letter-spacing:.06em;margin-bottom:4px}
+.method-desc{font-size:10px;color:var(--muted);line-height:1.6}
+.repo-link{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--border2);border-radius:3px;color:var(--muted2);font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s;margin-top:.5rem}
+.repo-link:hover{border-color:var(--accent);color:var(--accent)}
+.footer{margin-top:3rem;font-size:9px;color:var(--muted);letter-spacing:.06em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tag">Data Science · Public Health · R</div>
+  <h1>Life Expectancy<br>Regression Analysis</h1>
+  <p class="sub">Statistical modeling of global life expectancy trends using WHO data, with regression analysis and predictive analytics across countries and time.</p>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Overview</div>
+  <p class="body-text">This project uses regression analysis to model and predict life expectancy across countries using World Health Organization data. By examining the relationship between life expectancy and key socioeconomic and health indicators — GDP, healthcare access, education, disease prevalence — the model identifies which factors most strongly predict population health outcomes.</p>
+  <p class="body-text">Built in R, the analysis applies multiple regression techniques to a global dataset, producing a predictive model with interpretable coefficients and out-of-sample validation metrics.</p>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Methods</div>
+  <div class="methods">
+    <div class="method">
+      <div class="method-name">Multiple Regression</div>
+      <div class="method-desc">OLS and regularized regression to model life expectancy as a function of health and economic predictors</div>
+    </div>
+    <div class="method">
+      <div class="method-name">WHO Data Analysis</div>
+      <div class="method-desc">Real global health data across 190+ countries cleaned, transformed, and used for model training</div>
+    </div>
+    <div class="method">
+      <div class="method-name">Predictive Analytics</div>
+      <div class="method-desc">Out-of-sample forecasting with RMSE and R² evaluation across model specifications</div>
+    </div>
+    <div class="method">
+      <div class="method-name">Statistical Modeling</div>
+      <div class="method-desc">Residual analysis, multicollinearity checks, and feature selection for model refinement</div>
+    </div>
+  </div>
+
+  <div class="section-label">Stack</div>
+  <div class="chips">
+    <span class="chip lang">R</span>
+    <span class="chip">WHO Data</span>
+    <span class="chip">Regression Analysis</span>
+    <span class="chip">Statistical Modeling</span>
+    <span class="chip">ggplot2</span>
+  </div>
+
+  <a class="repo-link" href="https://github.com/Awo88/life-expectancy-regression-analysis" target="_blank">
+    ↗ View on GitHub
+  </a>
+
+  <div class="footer">Personal project · Source available on GitHub</div>
+</div>
+</body>
+</html>
